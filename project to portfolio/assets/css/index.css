@@ -1,0 +1,271 @@
+:root{
+            --main-bg-purpledark: #170312;
+        --main-bg-blue: #2970EF;
+    --main-bg-greenish: #f3f8f2;
+
+            --med-bg-babyBlue: #9FCEFF;
+
+        --pt-white: #fff;
+    --pat-black: #000;
+
+}
+*{
+margin: none;
+    padding: 0;
+}li{
+    list-style: none;
+}
+
+
+#container{
+display: flex;
+    flex-direction: row;
+        width: 100%;    
+            height: auto;
+                background-color: var(--main-bg-greenish);    
+}
+.logo > img{
+width: 110px;
+    justify-content: flex-end;
+        margin: 30px;
+} @media only screen and (max-width:768px){
+    .logo > img{
+        width: 65px;
+    }
+}
+ul{
+display:flex; 
+    flex-direction: row;
+        justify-content: flex-start;
+            align-items: center;
+}
+.nav-navbar, .nav-navbar:hover{
+margin-left: 20px;
+    color: var(--pat-black);
+        text-decoration: none;
+            font-family: 'poppins';
+                font-size: 1.1rem;
+                    font-weight: 500;
+                            letter-spacing: 2px;            
+} @media only screen and (max-width:1024px){
+    .nav-navbar{
+        width: 20%;
+    }
+} @media only screen and (max-width:768px){
+    .nav-navbar{
+        position:absolute;
+            right: 0;
+                height: 80vh;
+                    top: 20vh;
+                        background-color: var(--main-bg-greenish);
+                            display: flex;
+                                flex-direction: column;
+                                    align-items: center;
+                                        flex-wrap: wrap;
+                                            width: 50%;
+                                                transform: translateX(100%);
+                                                    transition: transform 0.5s ease-in;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+} @keyframes navlinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.rtg, .rtg:hover{        
+    color: var(--pt-white);
+        text-transform: capitalize;
+            font-family: 'poppins';
+                font-size: 1.3rem;
+                    font-weight: 500;
+}
+.rtg-btn{
+    width: 150px;
+        height: 40px;
+            background-color: var(--med-bg-babyBlue);
+    border-style: none;
+                margin-left: 20%;
+                    display: inline-block;
+                        text-decoration: none;
+                            border-color: var(--med-bg-babyBlue)
+}
+
+
+.burguer div{
+    width: 25px;
+        height: 5px;
+            background-color: var(--main-bg-purpledark);
+                display: flex;
+                    flex-direction: column;
+                        margin-top:7px;
+                            margin-left: 20px;
+}
+.burguer{
+    display: none;
+} @media only screen and (max-width:768px){
+    header{
+        overflow: hidden;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .burguer{
+        display: block;
+            margin-left: 180px;
+    }
+}
+
+
+#bg{
+    background-color: var(--main-bg-greenish);
+        width: 100%;
+            height: 800px;
+                display: flex;      
+} @media only screen and (max-width:768px) {
+    #bg{
+        width: 100%;
+            height: 1000px;
+    }
+    .ctnt{
+        flex-wrap: wrap;
+            padding: none;
+    }
+} .ctnt{
+        flex-direction: column;
+            padding: 40px;
+}.txt1{
+        font-size: 4em;
+            font-weight: 600;
+                font-family: 'poppins';
+                    color: var(--pat-black);
+} .txt2{
+    font-weight: 400;
+        font-family: 'poppins';
+            font-size: 2.2rem;  
+                color: var(--pat-black);
+}  
+.lg{
+    height: 100%;
+        padding: 30px;
+            
+                padding-left: 20px;
+} @media only screen and (max-width:768px){
+    .lg{
+        display: none;
+    }
+}
+.anchor{
+    height: 90px;
+        width: 190px;
+            font-size: 1.5rem;
+                font-weight: 300;
+                    font-family: 'poppins';
+                        font-style: italic;
+                            background-color: var(--med-bg-babyBlue);
+                                border-radius: 20px;
+                                        border-style: none;
+                                            margin-top: 20px;
+                                                margin-left: 100px;
+}
+
+
+.transition{
+    background-color: var(--main-bg-blue);
+        width: 100%;
+            height: 100%;
+}   .container{
+    display: flex;
+        flex-direction: row;
+            justify-content: space-between;
+                flex-wrap: wrap;
+} .gp-sec{
+    width: 33%;
+        height: 100%;
+            margin: 20px;
+                text-align:left;
+}.title-trans{
+    font-size: 2.5em;
+        font-family: 'poppins';
+            font-weight: 200;
+                color: var(--pt-white)
+} .txt-trans{
+    font-size: 1.5em;
+        font-family: 'poppins';
+            font-weight: 400;
+                color:var(--pt-white);
+                    margin-top: 20px;
+                        text-align: justify;
+}
+
+#courses{
+    width: 100%;
+        height: auto;
+            background-color:var(--main-bg-greenish);
+                padding: 30px;
+} #title-courses{
+    display: flex;
+        justify-content: center;
+            width: 100%;    
+                height: auto;
+} .title-courses{
+    color: var(--main-bg-purpledark);
+        font-family: 'poppins';
+            font-weight: 500;
+                font-size: 4rem;
+}
+#courses-grid{
+    padding: 20px;
+        width: 100%;
+            height: auto;
+                display: grid;
+                    grid-template-columns: 33% 33% 33%;
+                    grid-template-rows: 33% 33% 33%;
+                    grid-area: 
+                    'esck apol grek'
+                    'wrld dial homi';
+                    align-items:center;
+}
+    .esck{
+            display: flex;
+                justify-content: center;
+                    width: 150px;
+                        height: 175px;
+    }
+        .apol{
+            display: flex;
+                justify-content: center;
+                    width: 150px;
+                        height: 175px;
+    }
+            .grek{
+                display: flex;
+                justify-content: center;
+                    width: 150px;
+                        height: 175px;
+    }
+                .wrld{
+                    display: flex;
+                    justify-content: center;
+                        width: 150px;
+                            height: 175px;
+    }
+        .dial{
+            display: flex;
+            justify-content: center;
+                width: 150px;
+                    height: 175px;
+    }
+    .homi{
+        display: flex;
+        justify-content: center;
+            width: 150px;
+                height: 175px;
+    } 
